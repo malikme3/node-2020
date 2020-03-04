@@ -11,6 +11,9 @@ export class TeamsController {
     try {
       var params = {
         TableName: 'yaddadyaddda',
+        Key: {
+          '<AttributeName>': 'someValue',
+        },
       };
       console.log('getTeam  db params: ', params);
       const resp = await this.dynamodb.get(params).promise();
